@@ -243,7 +243,8 @@
         .globe-glow {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to right, rgba(229, 231, 235, 0.4), rgba(209, 213, 219, 0.4));
+            /* MUDANÇA AQUI: Gradiente amarelo/dourado */
+            background: linear-gradient(to right, rgba(250, 204, 21, 0.4), rgba(234, 179, 8, 0.4));
             border-radius: 9999px;
             filter: blur(80px);
             animation: pulse-slow 3s ease-in-out infinite;
@@ -503,7 +504,7 @@
                 <div class="nav-links">
                     <a href="#services">Services</a>
                     <a href="#work">Work</a>
-                    <a href="#about">About Us</a>
+                    <a href="About-Us/about-us.html">About Us</a>
                 </div>
                 <div>
                     <a href="https://form.typeform.com/to/U9C6k2dX" target="_blank" rel="noopener noreferrer" class="cta-button">
@@ -532,7 +533,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                             </svg>
                         </a>
-                        <a href="#about" class="secondary-button">About Us</a>
+                        <a href="About-Us/about-us.html" class="secondary-button">About Us</a>
                     </div>
                 </div>
                 
@@ -786,8 +787,9 @@
         mapSamples: 16000,
         mapBrightness: 6,
         baseColor: [1, 1, 1],     // White background
+        // MUDANÇA AQUI: Cor do brilho para amarelo dourado
         markerColor: [0.1, 0.1, 0.1], // Dark markers
-        glowColor: [1, 1, 1],    // White glow
+        glowColor: [1, 0.8, 0],    // Amarelo dourado
         markers: [
           { location: [37.7595, -122.4367], size: 0.03 },
           { location: [40.7128, -74.0060], size: 0.03 },
