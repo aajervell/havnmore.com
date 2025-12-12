@@ -448,81 +448,11 @@
             line-height: 1.625;
         }
         
-        /* Stats Section */
-        .dark-bg {
-            background: linear-gradient(to bottom right, #111827, #000, #111827);
-            color: white;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-        
-        @media (min-width: 768px) {
-            .stats-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            color: #d1d5db;
-            font-weight: 300;
-        }
-        
-        /* CTA Section */
-        .cta-box {
-            background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
-            border-radius: 1.5rem;
-            padding: 3rem;
-            text-align: center;
-            border: 1px solid #e5e7eb;
-        }
-        
-        @media (min-width: 768px) {
-            .cta-box {
-                padding: 4rem;
-            }
-        }
-        
-        .cta-icon {
-            width: 4rem;
-            height: 4rem;
-            margin: 0 auto 1.5rem;
-            color: #111827;
-        }
-        
-        .cta-box h2 {
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-box p {
-            color: #4b5563;
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
-            max-width: 42rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-box .primary-button {
-            display: inline-flex;
-            font-size: 1.125rem;
-            padding: 1rem 2.5rem;
-        }
-        
         /* Footer */
         footer {
             border-top: 1px solid #f3f4f6;
             padding: 3rem 0;
+            margin-top: 2rem;
         }
         
         .footer-content {
@@ -563,7 +493,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="nav-content">
@@ -587,7 +516,6 @@
 
     <div class="divider"></div>
 
-    <!-- Hero Section -->
     <div class="hero">
         <div class="container hero-content">
             <div class="hero-grid">
@@ -616,7 +544,6 @@
         </div>
     </div>
 
-    <!-- Process Section -->
     <div id="services" class="section">
         <div class="container">
             <div class="section-header">
@@ -788,7 +715,6 @@
         </div>
     </div>
 
-    <!-- Why Choose Us -->
     <div class="section light-bg">
         <div class="container">
             <div class="section-header">
@@ -818,4 +744,61 @@
                 </div>
 
                 <div class="feature">
-                    <div class="feature-icon" style="background: linear-
+                    <div class="feature-icon" style="background: linear-gradient(to bottom right, #4b5563, #1f2937);">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3>Technical Excellence</h3>
+                    <p>We use the latest technologies to ensure your website is fast, secure, and performs perfectly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">© 2025 havnmore. All rights reserved.</div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+      import createGlobe from 'https://cdn.skypack.dev/cobe'
+
+      let phi = 0
+      let canvas = document.getElementById("cobe")
+
+      const globe = createGlobe(canvas, {
+        devicePixelRatio: 2,
+        width: 1000,
+        height: 1000,
+        phi: 0,
+        theta: 0,
+        dark: 0,
+        diffuse: 1.2,
+        mapSamples: 16000,
+        mapBrightness: 6,
+        baseColor: [1, 1, 1],     // White background
+        markerColor: [0.1, 0.1, 0.1], // Dark markers
+        glowColor: [1, 1, 1],    // White glow
+        markers: [
+          { location: [37.7595, -122.4367], size: 0.03 },
+          { location: [40.7128, -74.0060], size: 0.03 },
+          { location: [51.5074, -0.1278], size: 0.03 },
+          { location: [38.7223, -9.1393], size: 0.08 }, // Lisbon
+        ],
+        onRender: (state) => {
+          state.phi = phi
+          phi += 0.005
+        },
+      })
+    </script>
+</body>
+</html>
